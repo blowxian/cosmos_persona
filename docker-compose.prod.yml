@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  cosmos_persona:
+    build:
+      context: .
+      args:
+        - NODE_ENV=production
+      target: production
+    command: npm run start
+    volumes:
+      - .:/app
+      - /app/.next
+      - /app/node_modules
+    ports:
+      - '3003:3000'                                               # 区分于其他分支的端口
+    environment:
+      - NODE_ENV=production
+    restart: always
+    container_name: cosmos_persona_prod
+networks:
+  cosmos_persona_network:
+    driver: bridge

@@ -17,9 +17,7 @@ type Answer = {
 type Question = {
     question: string;
     image: string;
-    answers: {
-        [key: string]: Answer;
-    };
+    answers: Answer[];
 };
 
 type Props = {
@@ -39,7 +37,7 @@ type Scores = {
 
 const Questions: React.FC<Props> = ({questions}) => {
     const [curr, setCurr] = useState(0);
-    const [answers, setAnswers] = useState<string[]>([]);
+    const [answers, setAnswers] = useState<Answer[]>([]);
     const [selected, setSelected] = useState<string>("");
     const [progressValue, setProgressValue] = useState(0);
     const [scores, setScores] = useState<Scores>({
@@ -54,9 +52,9 @@ const Questions: React.FC<Props> = ({questions}) => {
     });
     const {onOpen} = useModalStore();
 
-    const handleCheck = (answer: string) => {
-        setSelected(answer);
-        const selectedAnswer = questions[curr].answers[answer];
+    const handleCheck = (index: number) => {
+        setSelected(index.toString());
+        const selectedAnswer = questions[curr].answers[index];
 
         // Update score
         const newScores = {...scores};
@@ -103,8 +101,8 @@ const Questions: React.FC<Props> = ({questions}) => {
         });
     };
 
-    const handleShuffle = (answers: { [key: string]: Answer }) => {
-        return Object.keys(answers).sort(() => Math.random() - 0.5);
+    const handleShuffle = (answers: Answer[]) => {
+        return answers.sort(() => Math.random() - 0.5);
     };
 
     useEffect(() => {
@@ -119,6 +117,7 @@ const Questions: React.FC<Props> = ({questions}) => {
         return text.replace(/\*(.*?)\*/g, '<span class="font-bold underline">$1</span>');
     };
 
+    // @ts-ignore
     return (
         <div className="wrapper">
             <div className="bg-white p-4 shadow-md w-full md:w-[80%] lg:w-[70%] max-w-5xl rounded-md">
@@ -136,10 +135,10 @@ const Questions: React.FC<Props> = ({questions}) => {
                             {answers?.map((answer, i) => (
                                 <button
                                     key={i}
-                                    className={`option ${selected && handleSelect(answer)}`}
+                                    className={`option ${selected && handleSelect(i.toString())}`}
                                     disabled={!!selected}
-                                    onClick={() => handleCheck(answer)}
-                                    dangerouslySetInnerHTML={{ __html: `${alphabeticNumeral(i)} ${formatText(questions[curr].answers[answer].text)}` }}
+                                    onClick={() => handleCheck(i)}
+                                    dangerouslySetInnerHTML={{ __html: `${alphabeticNumeral(i)} ${formatText(answer.text)}` }}
                                 />
                             ))}
                             <Separator/>

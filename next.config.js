@@ -8,10 +8,10 @@ module.exports = {
     },
     env: {
         SiteTitle: 'Sample Quiz App',
-        MaxCount: 10
+        MaxCount: '10'
     },
-    exportTrailingSlash: true,
-    exportPathMap: function() {
+    trailingSlash: true,
+    generateStaticParams: function() {
       return {
         '/': { page: '/' }
       };

@@ -3,8 +3,7 @@ import { create } from "zustand";
 export type modalType = "showResults" | "quitQuiz";
 
 interface AdditionalData {
-  score?: number;
-  limit?: number;
+  result?: string;
 }
 
 interface modalStore {

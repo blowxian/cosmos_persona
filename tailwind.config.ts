@@ -67,10 +67,19 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "pulseShadow": {
+          '0%, 100%': { boxShadow: '0 0 5px rgba(255, 215, 0, 0.5)' },
+          '50%': { boxShadow: '0 0 15px rgba(255, 215, 0, 1)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'pulse-shadow': 'pulseShadow 1s infinite',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'custom-bg': "url('/img/thumbnail_01.png')",
       },
     },
   },

@@ -11,7 +11,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
     title: "Cosmos Persona Personality Quiz Test",
-    description: "Cosmos Persona Personality Quiz Test",
+    description: "The Cosmos Persona Personality Quiz is a whimsical and unique online personality test . It has recently taken social media by storm, amassing immense popularity on platforms like Instagram, TikTok, and Reddit. ",
 };
 
 export default function RootLayout({

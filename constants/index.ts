@@ -8,7 +8,7 @@ export const categoryOptions = [
 export const questions = [
   {
     question: "You're taking the bus on your way back home. It's been a loooong day, what are you thinking about?",
-    image: "images/Q1.gif",
+    image: "thumbnail/Q1.jpeg",
     answers: [
       {
         text: "I'm just so tired and can't wait to go home. Why does everyday feel the same...",
@@ -22,7 +22,7 @@ export const questions = [
   },
   {
     question: "You look outside the windows, seems like it's going to rain soon. Suddenly everything turns into darkness!!",
-    image: "images/Q2.gif",
+    image: "thumbnail/Q2.jpeg",
     answers: [
       {
         text: "I don't remember this tunnel. *Pull out your phone to look at the map*",
@@ -36,7 +36,7 @@ export const questions = [
   },
   {
     question: "Before you can do anything, the bus stops and everything around you floats up!",
-    image: "images/Q3.gif",
+    image: "thumbnail/Q3.jpeg",
     answers: [
       {
         text: "Ok this is weird, am I dreaming? *pinch your arm*",
@@ -50,7 +50,7 @@ export const questions = [
   },
   {
     question: "Amidst the surprise, your eyes catch something drifting past the window.",
-    image: "images/Q4.gif",
+    image: "thumbnail/Q4.jpeg",
     answers: [
       {
         text: "Woahhh...so many cats! How cute!! I wanna give them a hug!",
@@ -64,7 +64,7 @@ export const questions = [
   },
   {
     question: "'Welcome Aboard!' a small robot appears and announces, 'We will reach our destination in 5 months 6 days and 2 hours!'",
-    image: "images/Q5.gif",
+    image: "thumbnail/Q5.jpeg",
     answers: [
       {
         text: "Cool! A space cruise?! Where are we going? Do I get a spacesuit? This is so exciting!",
@@ -78,7 +78,7 @@ export const questions = [
   },
   {
     question: "The robot just points to the back of the bus which now looks more like inside of a spaceship! What do you want to see first?",
-    image: "images/Q6.gif",
+    image: "thumbnail/Q6.jpeg",
     answers: [
       {
         text: "Solar system themed fountain in the middle. I want to take pictures with it.",
@@ -92,7 +92,7 @@ export const questions = [
   },
   {
     question: "On the way back to your seat, you are surrounded by cats! 'Unauthorized passenger detected, CAPTURE CAPTURE!'",
-    image: "images/Q7.gif",
+    image: "thumbnail/Q7.jpeg",
     answers: [
       {
         text: "Woah! What do you mean unauthorized? I'm the passenger of this cruise!",
@@ -106,7 +106,7 @@ export const questions = [
   },
   {
     question: "Suddenly, the robot glides in, it whispers something to the cats that makes them stop.",
-    image: "images/Q8.gif",
+    image: "thumbnail/Q8.jpeg",
     answers: [
       {
         text: "Bob!! Thank you! You come to save me, right?",
@@ -120,7 +120,7 @@ export const questions = [
   },
   {
     question: "The robot transforms into a giant vacuum cleaner, the cats use it to point at you!",
-    image: "images/Q9.gif",
+    image: "thumbnail/Q9.jpeg",
     answers: [
       {
         text: "Throw your coat at them as distraction, run towards the big green 'EXIT' sign!",
@@ -134,7 +134,7 @@ export const questions = [
   },
   {
     question: "You run past the gift shop. Looks like you got rid of them. It wouldn't hurt to get some souvenirs, right?",
-    image: "images/Q10.gif",
+    image: "thumbnail/Q10.jpeg",
     answers: [
       {
         text: "Get the Jupiter headphone, wear it to hear people's thoughts!",
@@ -148,7 +148,7 @@ export const questions = [
   },
   {
     question: "The giant vacuum cleaner suddenly emerges in front of you! You're sucked into its vortex!!!",
-    image: "images/Q11.gif",
+    image: "thumbnail/Q11.jpeg",
     answers: [
       {
         text: "It's ok, this is just a dream! I'll wake up soon! *close your eyes and give up*",
@@ -162,7 +162,7 @@ export const questions = [
   },
   {
     question: "After a moment of darkness, you find yourself back in the bus. 'Are you alright?' the ticket inspector asks",
-    image: "images/Q12.gif",
+    image: "thumbnail/Q12.jpeg",
     answers: [
       {
         text: "Woah! I thought I was captured... Nevermind! I'm alright now, I guess? *panic in silence*",

@@ -122,6 +122,11 @@ const Questions: React.FC<Props> = ({questions}) => {
             setAnswers(handleShuffle(questions[curr].answers));
             setProgressValue((100 / questions.length) * (curr + 1));
         }
+
+        if (questions.length > 0 && curr + 1 < questions.length) {
+            const nextImage = `/${questions[curr + 1].image}`;
+            preloadImages([nextImage]).then(r => console.log("Next image preloaded!"));
+        }
     }, [curr, questions]);
 
     const formatText = (text: string): string => {
@@ -139,10 +144,15 @@ const Questions: React.FC<Props> = ({questions}) => {
                 <div className="flex flex-col min-h-[70vh] py-10 px-3 md:px-5 gap-4 w-full">
                     {questions.length > 0 && (
                         <>
-                            <h2
-                                className="text-2xl text-center font-medium"
-                                dangerouslySetInnerHTML={{__html: formatText(`Q${curr + 1}. ${questions[curr]?.question}`)}}
-                            />
+                            <h2 className="text-2xl text-left font-medium">
+                                <img
+                                    src={`/${questions[curr]?.image}`}
+                                    alt="Question Image"
+                                    className="w-24 h-24 md:w-32 md:h-32 float-right ml-6 mb-2 rounded-2xl"
+                                />
+                                <span
+                                    dangerouslySetInnerHTML={{__html: formatText(`Q${curr + 1}. ${questions[curr]?.question}`)}}/>
+                            </h2>
 
                             {answers?.map((answer, i) => (
                                 <button

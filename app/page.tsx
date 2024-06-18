@@ -16,6 +16,7 @@ export default function Home() {
                 />
                 <meta name="keywords"
                       content="Cosmos Persona, Personality Quiz, Online Test, Space-themed Quiz, Cosmic Identity"/>
+                <meta name="robots" content="noindex"/>
             </Head>
             <main
                 className="wrapper py-6 bg-gradient-radial from-[rgb(44,62,80)] via-[rgb(52,73,94)] to-[rgb(34,47,62)]">

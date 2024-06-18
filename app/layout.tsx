@@ -9,8 +9,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Quizy - Test Your Knowledge!",
-  description: "A Quiz App built on Next JS",
+  title: "Cosmos Persona Personality Quiz Test",
+  description: "Cosmos Persona Personality Quiz Test",
 };
 
 export default function RootLayout({

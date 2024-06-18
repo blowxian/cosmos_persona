@@ -1,11 +1,12 @@
 "use client";
 
 import {Progress} from "@/components/ui/progress";
-import {alphabeticNumeral} from "@/constants";
+import {alphabeticNumeral, resultOptions} from "@/constants";
 import useModalStore from "@/hooks/useModalStore";
 import React, {useEffect, useState} from "react";
 import {Button} from "./ui/button";
 import {Separator} from "./ui/separator";
+import {preloadImages} from '@/lib/preloadImages';
 
 type Answer = {
     text: string;
@@ -64,6 +65,17 @@ const Questions: React.FC<Props> = ({questions}) => {
         setScores(newScores);
 
         console.log(scores);
+
+        // Check if it is the last question
+        if (curr === questions.length - 1) {
+            // List of images to preload based on result
+            const result = calculateResult(newScores);
+            const resultImage = `/_next/image?url=%2Fresult_image%2F${resultOptions[result as keyof typeof resultOptions]?.image}&w=1080&q=75`;
+
+            if (resultImage) {
+                preloadImages([resultImage]).then(r => console.log("resultImage loaded!"));
+            }
+        }
     };
 
     const handleSelect = (i: string) => {
@@ -138,7 +150,7 @@ const Questions: React.FC<Props> = ({questions}) => {
                                     className={`option ${selected && handleSelect(i.toString())}`}
                                     disabled={!!selected}
                                     onClick={() => handleCheck(i)}
-                                    dangerouslySetInnerHTML={{ __html: `${alphabeticNumeral(i)} ${formatText(answer.text)}` }}
+                                    dangerouslySetInnerHTML={{__html: `${alphabeticNumeral(i)} ${formatText(answer.text)}`}}
                                 />
                             ))}
                             <Separator/>

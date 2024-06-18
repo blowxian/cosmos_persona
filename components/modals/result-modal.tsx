@@ -45,6 +45,7 @@ const ResultModal = () => {
                     alt={result ?? "Your Profile"}
                     width={500} // 调整宽度和高度
                     height={500} // 调整宽度和高度
+                    priority
                 />
             )}
             <Button

@@ -136,7 +136,6 @@ export default function Home() {
                         placeholder={"blur"}
                         blurDataURL={"/img/thumbnail_04.png"}
                     />
-                    // TODO：待调整文字布局
                     <ul className="list-decimal list-inside mb-4 flex flex-wrap text-xs">
                         <li className="w-1/4 pr-2">Black Hole</li>
                         <li className="w-1/4 pr-2">Dark Matter</li>

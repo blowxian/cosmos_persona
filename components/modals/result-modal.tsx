@@ -9,26 +9,44 @@ import useModalStore from "@/hooks/useModalStore";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { resultOptions } from "@/constants";
+import Image from "next/image"; // 导入 Image 组件
+
+type ResultType = "ISTJ" | "ISFJ" | "INFJ" | "INTJ" | "ISTP" | "ISFP" | "INFP" | "INTP" | "ESTP" | "ESFP" | "ENFP" | "ENTP" | "ESTJ" | "ESFJ" | "ENFJ" | "ENTJ";
+
+interface ResultOptions {
+  [key: string]: {
+    image: string;
+  };
+}
 
 const ResultModal = () => {
   const { isOpen, type, onClose, additionalData } = useModalStore();
   const open = isOpen && type === "showResults";
   const router = useRouter();
 
+  const result = additionalData?.result as ResultType | undefined;
+  const resultImage = result ? resultOptions[result]?.image : null;
+
   return (
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent>
         <DialogHeader>
           <DialogTitle className="text-center text-xl md:text-2xl">
-            Quiz Result
+            Result
           </DialogTitle>
         </DialogHeader>
         <Separator />
         <DialogDescription>
-          <div className="flex items-center flex-col py-6 md:py-10 lg:py-12">
-            <h3 className="text-lg md:2xl text-primary font-semibold tracking-wide">
-              You scored: {`${additionalData?.result}`}
-            </h3>
+          <div className="flex items-center flex-col py-1 md:py-2 lg:py-3">
+            {resultImage && (
+                <Image
+                    src={`/result_image/${resultImage}`} // 根据你的项目调整图片路径
+                    alt={result ?? "Your Profile"}
+                    width={500} // 调整宽度和高度
+                    height={500} // 调整宽度和高度
+                />
+            )}
             <Button
               onClick={() => {
                 router.push("/");

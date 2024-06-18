@@ -176,6 +176,56 @@ export const questions = [
   },
 ];
 
+export const resultOptions = {
+  ISTJ: {
+    image: "1DE.png",
+  },
+  ISFJ: {
+    image: "2light.png",
+  },
+  INFJ: {
+    image: "3UFO.png",
+  },
+  INTJ: {
+    image: "4nebula.png",
+  },
+  ISTP: {
+    image: "5comet.png",
+  },
+  ISFP: {
+    image: "6ST.png",
+  },
+  INFP: {
+    image: "7DM.png",
+  },
+  INTP: {
+    image: "8met.png",
+  },
+  ESTP: {
+    image: "9BH.png",
+  },
+  ESFP: {
+    image: "10Sn.png",
+  },
+  ENFP: {
+    image: "11Grav.png",
+  },
+  ENTP: {
+    image: "12hand.png",
+  },
+  ESTJ: {
+    image: "13sat.png",
+  },
+  ESFJ: {
+    image: "14sun.png",
+  },
+  ENFJ: {
+    image: "15gal.png",
+  },
+  ENTJ: {
+    image: "16rocket.png",
+  },
+};
 
 export const alphabeticNumeral = (index: number) => {
   const asciiCode = index + 65;

@@ -18,18 +18,20 @@ export default function Home() {
                       content="Cosmos Persona, Personality Quiz, Online Test, Space-themed Quiz, Cosmic Identity"/>
                 <meta name="robots" content="noindex"/>
             </Head>
-            <main
-                className="wrapper py-6 bg-gradient-radial from-[rgb(44,62,80)] via-[rgb(52,73,94)] to-[rgb(34,47,62)]">
 
-                <section
-                    className="content bg-white p-6 shadow-md w-full md:w-[90%] lg:w-[70%] max-w-4xl rounded-md mx-auto">
-                    <h2 className="text-2xl font-semibold mb-4">Cosmos Persona Personality Quiz Test</h2>
+            <header className="bg-gray-800 text-white py-4">
+                <div className="container mx-auto items-center w-full md:w-[90%] lg:w-[70%]">
+                    <h1 className="text-2xl font-semibold mb-4">Cosmos Persona Personality Quiz Test</h1>
                     <p>
                         The Cosmos Persona Personality Quiz is a whimsical and unique online personality test . It has
                         recently taken social media by storm, amassing immense popularity on platforms like Instagram,
                         TikTok, and Reddit.
                     </p>
-                </section>
+                </div>
+            </header>
+
+            <main
+                className="wrapper py-6 bg-gradient-radial from-[rgb(44,62,80)] via-[rgb(52,73,94)] to-[rgb(34,47,62)]">
 
                 <Questions
                     questions={questions}
@@ -69,6 +71,34 @@ export default function Home() {
                         Your responses determine your "Cosmos Persona" - a celestial archetype reflecting your core
                         personality.
                     </p>
+                </section>
+
+                <section
+                    className="content bg-white p-6 shadow-md w-full md:w-[90%] lg:w-[70%] max-w-4xl rounded-md mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="aspect-w-16 aspect-h-9">
+                            <iframe
+                                src="https://www.youtube.com/embed/KGYgzHQy6Tw?si=gacsd_pJAPBs3kwl"
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                                className="w-full h-full"
+                            ></iframe>
+                        </div>
+                        <div className="aspect-w-16 aspect-h-9">
+                            <iframe
+                                src="https://www.youtube.com/embed/OReqDA1fuGI?si=E3t1o9U52ie2-lsF"
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                                className="w-full h-full"
+                            ></iframe>
+                        </div>
+                    </div>
                 </section>
 
                 <section
@@ -265,7 +295,43 @@ export default function Home() {
                     </p>
                 </section>
 
+                <section
+                    className="content bg-white p-6 shadow-md w-full md:w-[90%] lg:w-[70%] max-w-4xl rounded-md mx-auto mb-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="aspect-w-16 aspect-h-9">
+                            <iframe
+                                src="https://www.youtube.com/embed/KGYgzHQy6Tw?si=gacsd_pJAPBs3kwl"
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                                className="w-full h-full"
+                            ></iframe>
+                        </div>
+                        <div className="aspect-w-16 aspect-h-9">
+                            <iframe
+                                src="https://www.youtube.com/embed/OReqDA1fuGI?si=E3t1o9U52ie2-lsF"
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                                className="w-full h-full"
+                            ></iframe>
+                        </div>
+                    </div>
+                </section>
+
             </main>
+
+            <footer className="bg-gray-800 text-white py-4">
+                <div className="container mx-auto flex justify-between items-center w-full md:w-[90%] lg:w-[70%]">
+                    <a href="/#" className="text-sm font-semibold hover:underline">Blog</a>
+                    <a href="/#" className="text-sm font-semibold hover:underline">Privacy Policy</a>
+                    <a href="/#" className="text-sm font-semibold hover:underline">Disclaimer</a>
+                </div>
+            </footer>
         </>
 
     );

@@ -160,7 +160,7 @@ const Questions: React.FC<Props> = ({ questions }) => {
             <div className="bg-white p-6 shadow-md w-full md:w-[90%] lg:w-[70%] max-w-4xl rounded-md mx-auto">
                 {!quizStarted ? (
                     <div className="flex flex-col items-center justify-center h-full">
-                        <h1 className="heading">Welcome to Cosmos Persona Profile Test</h1>
+                        <h2 className="heading">Welcome to Cosmos Persona Profile Test</h2>
                         <Separator className="mb-3" />
                         <div className="w-full min-h-[50vh] my-2 flex justify-center items-center bg-custom-bg bg-contain bg-center bg-no-repeat">
                             <Button className="text-2xl bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2 px-4 rounded-full border border-gray-300 animate-pulse-shadow" onClick={() => setQuizStarted(true)}>Start Quiz</Button>

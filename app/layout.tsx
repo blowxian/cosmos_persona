@@ -10,8 +10,10 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-    title: "Cosmos Persona Personality Quiz Test",
+    title: "Cosmos Persona Personality Quiz Test | Discover Your Cosmic Identity",
     description: "The Cosmos Persona Personality Quiz is a whimsical and unique online personality test . It has recently taken social media by storm, amassing immense popularity on platforms like Instagram, TikTok, and Reddit. ",
+    keywords: "Cosmos Persona, Personality Quiz, Online Test, Space-themed Quiz, Cosmic Identity",
+    robots: "noindex",
 };
 
 export default function RootLayout({

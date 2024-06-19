@@ -33,10 +33,9 @@ const ResultModal = () => {
       <DialogContent>
         <DialogHeader>
           <DialogTitle className="text-center text-xl md:text-2xl">
-            Result
+            Your Are
           </DialogTitle>
         </DialogHeader>
-        <Separator />
         <DialogDescription>
           <div className="flex items-center flex-col py-1 md:py-2 lg:py-3">
             {resultImage && (

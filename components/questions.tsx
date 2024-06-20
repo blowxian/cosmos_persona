@@ -59,21 +59,11 @@ const Questions: React.FC<Props> = ({questions}) => {
         E: 0,
     });
     const [quizStarted, setQuizStarted] = useState(false);
+    const [hasShownResult, setHasShownResult] = useState(false); // 新增状态变量
     const {onOpen} = useModalStore();
 
     const handleCheck = (index: number) => {
         setSelected(index.toString());
-
-        // Check if it is the last question
-        /*if (curr === questions.length - 1) {
-            // List of images to preload based on result
-            const result = calculateResult(newScores);
-            const resultImage = `/_next/image?url=%2Fresult_image%2F${resultOptions[result as keyof typeof resultOptions]?.image}&w=1080&q=75`;
-
-            if (resultImage) {
-                preloadImages([resultImage]).then(r => console.log("resultImage loaded!"));
-            }
-        }*/
     };
 
     const handleSelect = (i: string) => {
@@ -119,9 +109,25 @@ const Questions: React.FC<Props> = ({questions}) => {
     };
 
     const handleShowResult = () => {
-        onOpen("showResults", {
-            result: calculateResult(scores),
-        });
+        if (!hasShownResult && selected !== "") {
+            const selectedAnswer = questions[curr].answers[parseInt(selected)];
+
+            // Update score
+            const newScores = {...scores};
+            Object.keys(selectedAnswer.scores).forEach((scoreKey) => {
+                newScores[scoreKey as keyof Scores] += selectedAnswer.scores[scoreKey];
+            });
+            setScores(newScores);
+            setHasShownResult(true); // 设置结果已展示
+        }
+
+        console.log(scores);
+
+        setTimeout(() =>{
+            onOpen("showResults", {
+                result: calculateResult(scores),
+            })
+        }, 200);
     };
 
     const handleShuffle = (answers: Answer[]) => {
@@ -144,6 +150,7 @@ const Questions: React.FC<Props> = ({questions}) => {
             E: 0,
         });
         setQuizStarted(false);
+        setHasShownResult(false); // 重置展示结果状态
     };
 
     useEffect(() => {
@@ -177,21 +184,21 @@ const Questions: React.FC<Props> = ({questions}) => {
             <div className="bg-white p-6 shadow-md w-full md:w-[90%] lg:w-[70%] max-w-4xl rounded-md mx-auto">
                 {!quizStarted ? (
                     <div className="flex flex-col items-center justify-center h-full">
-                        <h2 className="heading">Welcome to Cosmos Persona Profile Test</h2>
+                        <h2 className="text-2xl font-semibold mb-4">Welcome to Cosmos Persona Profile Test</h2>
                         <Separator className="mb-3"/>
                         <div
                             className="w-full min-h-[50vh] my-2 flex justify-center items-center bg-custom-bg bg-contain bg-center bg-no-repeat">
                             <Button
-                                className="text-2xl bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2 px-4 rounded-full border border-gray-300 animate-pulse-shadow"
+                                className="text-5xl h-18 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2 px-4 rounded-full border border-gray-300 animate-pulse-shadow"
                                 onClick={() => {
                                     setQuizStarted(true);
                                     preloadResultImages();
-                                }}>Start Quiz</Button>
+                                }}>START</Button>
                         </div>
                     </div>
                 ) : (
                     <>
-                        <h1 className="heading">Profile Test</h1>
+                        <h2 className="text-2xl font-semibold mb-4 text-center">Cosmos Persona Profile Test</h2>
                         <Separator className="mb-3"/>
                         <Progress value={progressValue}/>
                         <div className="flex flex-col min-h-[50vh] py-10 px-3 md:px-5 gap-4 w-full">
@@ -211,6 +218,7 @@ const Questions: React.FC<Props> = ({questions}) => {
                                         <button
                                             key={i}
                                             className={`option ${selected && handleSelect(i.toString())}`}
+                                            disabled={curr === questions.length - 1 && !!selected}                       // 仅在最后一题时禁用按钮
                                             onClick={() => handleCheck(i)}
                                             dangerouslySetInnerHTML={{__html: `${alphabeticNumeral(i)} ${formatText(answer.text)}`}}
                                         />

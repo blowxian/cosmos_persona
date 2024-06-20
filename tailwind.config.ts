@@ -68,8 +68,8 @@ const config = {
                     to: {height: "0"},
                 },
                 "pulseShadow": {
-                    '0%, 100%': {boxShadow: '0 0 5px rgba(255, 215, 0, 0.5)'},
-                    '50%': {boxShadow: '0 0 15px rgba(255, 215, 0, 1)'},
+                    '0%, 100%': {boxShadow: '0 0 10px rgba(255, 215, 0, 0.5)'},
+                    '50%': {boxShadow: '0 0 30px rgba(255, 215, 0, 1)'},
                 },
             },
             animation: {

@@ -10,6 +10,16 @@ import { resultOptions } from "@/constants";
 import Image from "next/image"; // 导入 Image 组件
 import { QuizContext } from "@/components/questions";
 import {useContext} from "react";
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  LinkedinShareButton,
+  WeiboShareButton,
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon,
+  WeiboIcon,
+} from "react-share";
 
 type ResultType = "ISTJ" | "ISFJ" | "INFJ" | "INTJ" | "ISTP" | "ISFP" | "INFP" | "INTP" | "ESTP" | "ESFP" | "ENFP" | "ENTP" | "ESTJ" | "ESFJ" | "ENFJ" | "ENTJ";
 
@@ -50,12 +60,23 @@ const ResultModal = () => {
                     blurDataURL={`/result_image/${resultImage}`}
                 />
             )}
-            <Button
-              onClick={handleReplay}
-              className="mt-3 md:mt-5"
-            >
-              Play Again
-            </Button>
+            <div className="flex mt-4">
+              <FacebookShareButton url={'https://cosmospersona.net'} title={'Cosmos Persona Personality Quiz'} className="mr-2 mt-3 md:mt-5">
+                <FacebookIcon size={32} round/>
+              </FacebookShareButton>
+              <TwitterShareButton url={'https://cosmospersona.net'} title={'Cosmos Persona Personality Quiz'} className="mr-2 mt-3 md:mt-5">
+                <TwitterIcon size={32} round/>
+              </TwitterShareButton>
+              <LinkedinShareButton url={'https://cosmospersona.net'} title={'Cosmos Persona Personality Quiz'} className="mr-2 mt-3 md:mt-5">
+                <LinkedinIcon size={32} round/>
+              </LinkedinShareButton>
+              <Button
+                  onClick={handleReplay}
+                  className="mr-2 mt-3 md:mt-5"
+              >
+                Quiz Again
+              </Button>
+            </div>
           </div>
         </DialogDescription>
       </DialogContent>

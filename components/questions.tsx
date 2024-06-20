@@ -1,12 +1,12 @@
 "use client";
 
-import { Progress } from "@/components/ui/progress";
-import { alphabeticNumeral, resultOptions } from "@/constants";
+import {Progress} from "@/components/ui/progress";
+import {alphabeticNumeral, resultOptions} from "@/constants";
 import useModalStore from "@/hooks/useModalStore";
-import React, { useEffect, useState, createContext, useContext } from "react";
-import { Button } from "./ui/button";
-import { Separator } from "./ui/separator";
-import { preloadImages } from '@/lib/preloadImages';
+import React, {useEffect, useState, createContext, useContext} from "react";
+import {Button} from "./ui/button";
+import {Separator} from "./ui/separator";
+import {preloadImages} from '@/lib/preloadImages';
 import ResultModal from "@/components/modals/result-modal";
 import QuitQuizModal from "@/components/modals/quit-quiz-modal";
 
@@ -38,9 +38,12 @@ type Scores = {
     E: number;
 };
 
-export const QuizContext = createContext({ resetQuiz: () => {} });
+export const QuizContext = createContext({
+    resetQuiz: () => {
+    }
+});
 
-const Questions: React.FC<Props> = ({ questions }) => {
+const Questions: React.FC<Props> = ({questions}) => {
     const [curr, setCurr] = useState(0);
     const [answers, setAnswers] = useState<Answer[]>([]);
     const [selected, setSelected] = useState<string>("");
@@ -56,23 +59,13 @@ const Questions: React.FC<Props> = ({ questions }) => {
         E: 0,
     });
     const [quizStarted, setQuizStarted] = useState(false);
-    const { onOpen } = useModalStore();
+    const {onOpen} = useModalStore();
 
     const handleCheck = (index: number) => {
         setSelected(index.toString());
-        const selectedAnswer = questions[curr].answers[index];
-
-        // Update score
-        const newScores = { ...scores };
-        Object.keys(selectedAnswer.scores).forEach((scoreKey) => {
-            newScores[scoreKey as keyof Scores] += selectedAnswer.scores[scoreKey];
-        });
-        setScores(newScores);
-
-        console.log(scores);
 
         // Check if it is the last question
-        if (curr === questions.length - 1) {
+        /*if (curr === questions.length - 1) {
             // List of images to preload based on result
             const result = calculateResult(newScores);
             const resultImage = `/_next/image?url=%2Fresult_image%2F${resultOptions[result as keyof typeof resultOptions]?.image}&w=1080&q=75`;
@@ -80,7 +73,7 @@ const Questions: React.FC<Props> = ({ questions }) => {
             if (resultImage) {
                 preloadImages([resultImage]).then(r => console.log("resultImage loaded!"));
             }
-        }
+        }*/
     };
 
     const handleSelect = (i: string) => {
@@ -89,6 +82,19 @@ const Questions: React.FC<Props> = ({ questions }) => {
     };
 
     const handleNext = () => {
+        if (selected !== "") {
+            const selectedAnswer = questions[curr].answers[parseInt(selected)];
+
+            // Update score
+            const newScores = {...scores};
+            Object.keys(selectedAnswer.scores).forEach((scoreKey) => {
+                newScores[scoreKey as keyof Scores] += selectedAnswer.scores[scoreKey];
+            });
+            setScores(newScores);
+
+            console.log(scores);
+        }
+
         setAnswers(
             handleShuffle(questions[curr + 1].answers)
         );
@@ -161,22 +167,33 @@ const Questions: React.FC<Props> = ({ questions }) => {
         return text.replace(/\*(.*?)\*/g, '<span class="font-bold underline">$1</span>');
     };
 
+    const preloadResultImages = () => {
+        const resultImages = Object.values(resultOptions).map(option => `/_next/image?url=%2Fresult_image%2F${option.image}&w=1080&q=75`);
+        preloadImages(resultImages).then(r => console.log("Result images preloaded!"));
+    };
+
     return (
-        <QuizContext.Provider value={{ resetQuiz }}>
+        <QuizContext.Provider value={{resetQuiz}}>
             <div className="bg-white p-6 shadow-md w-full md:w-[90%] lg:w-[70%] max-w-4xl rounded-md mx-auto">
                 {!quizStarted ? (
                     <div className="flex flex-col items-center justify-center h-full">
                         <h2 className="heading">Welcome to Cosmos Persona Profile Test</h2>
-                        <Separator className="mb-3" />
-                        <div className="w-full min-h-[50vh] my-2 flex justify-center items-center bg-custom-bg bg-contain bg-center bg-no-repeat">
-                            <Button className="text-2xl bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2 px-4 rounded-full border border-gray-300 animate-pulse-shadow" onClick={() => setQuizStarted(true)}>Start Quiz</Button>
+                        <Separator className="mb-3"/>
+                        <div
+                            className="w-full min-h-[50vh] my-2 flex justify-center items-center bg-custom-bg bg-contain bg-center bg-no-repeat">
+                            <Button
+                                className="text-2xl bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2 px-4 rounded-full border border-gray-300 animate-pulse-shadow"
+                                onClick={() => {
+                                    setQuizStarted(true);
+                                    preloadResultImages();
+                                }}>Start Quiz</Button>
                         </div>
                     </div>
                 ) : (
                     <>
                         <h1 className="heading">Profile Test</h1>
-                        <Separator className="mb-3" />
-                        <Progress value={progressValue} />
+                        <Separator className="mb-3"/>
+                        <Progress value={progressValue}/>
                         <div className="flex flex-col min-h-[50vh] py-10 px-3 md:px-5 gap-4 w-full">
                             {questions.length > 0 && (
                                 <>
@@ -187,19 +204,18 @@ const Questions: React.FC<Props> = ({ questions }) => {
                                             className="w-24 h-24 md:w-32 md:h-32 float-right ml-6 mb-2 rounded-2xl"
                                         />
                                         <span
-                                            dangerouslySetInnerHTML={{ __html: formatText(`Q${curr + 1}. ${questions[curr]?.question}`) }} />
+                                            dangerouslySetInnerHTML={{__html: formatText(`Q${curr + 1}. ${questions[curr]?.question}`)}}/>
                                     </h2>
 
                                     {answers?.map((answer, i) => (
                                         <button
                                             key={i}
                                             className={`option ${selected && handleSelect(i.toString())}`}
-                                            disabled={!!selected}
                                             onClick={() => handleCheck(i)}
-                                            dangerouslySetInnerHTML={{ __html: `${alphabeticNumeral(i)} ${formatText(answer.text)}` }}
+                                            dangerouslySetInnerHTML={{__html: `${alphabeticNumeral(i)} ${formatText(answer.text)}`}}
                                         />
                                     ))}
-                                    <Separator />
+                                    <Separator/>
                                     <div
                                         className="flex mt-5 md:justify-between md:flex-row flex-col gap-4 md:gap-0 mx-auto max-w-xs w-full">
                                         <Button
@@ -225,7 +241,7 @@ const Questions: React.FC<Props> = ({ questions }) => {
                 )}
             </div>
             <ResultModal/>
-            <QuitQuizModal />
+            <QuitQuizModal/>
         </QuizContext.Provider>
     );
 };

@@ -20,7 +20,7 @@ export default function Home() {
             </Head>
 
             <header className="bg-gray-800 text-white py-4">
-                <div className="container mx-auto items-center w-full md:w-[90%] lg:w-[70%]">
+                <div className="container mx-auto items-center w-full md:w-[90%] lg:w-[70%] max-w-4xl">
                     <h1 className="text-2xl font-semibold mb-4">Cosmos Persona Personality Quiz Test</h1>
                     <p>
                         The Cosmos Persona Personality Quiz is a whimsical and unique online personality test . It has
@@ -300,7 +300,7 @@ export default function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="aspect-w-16 aspect-h-9">
                             <iframe
-                                src="https://www.youtube.com/embed/KGYgzHQy6Tw?si=gacsd_pJAPBs3kwl"
+                                src="https://www.youtube.com/embed/8qh_sPv7Ngs?si=gCmEPOFWBGJiM87I"
                                 title="YouTube video player"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -311,7 +311,7 @@ export default function Home() {
                         </div>
                         <div className="aspect-w-16 aspect-h-9">
                             <iframe
-                                src="https://www.youtube.com/embed/OReqDA1fuGI?si=E3t1o9U52ie2-lsF"
+                                src="https://www.youtube.com/embed/UGl8nQ9n5V8?si=b31Bw89-pWHAhZro"
                                 title="YouTube video player"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -326,7 +326,7 @@ export default function Home() {
             </main>
 
             <footer className="bg-gray-800 text-white py-4">
-                <div className="container mx-auto flex justify-between items-center w-full md:w-[90%] lg:w-[70%]">
+                <div className="container mx-auto flex justify-between items-center w-full md:w-[90%] lg:w-[70%] max-w-4xl">
                     <a href="/#" className="text-sm font-semibold hover:underline">Blog</a>
                     <a href="/#" className="text-sm font-semibold hover:underline">Privacy Policy</a>
                     <a href="/#" className="text-sm font-semibold hover:underline">Disclaimer</a>

@@ -192,7 +192,6 @@ const Questions: React.FC<Props> = ({questions}) => {
                                 className="text-5xl h-18 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2 px-4 rounded-full border border-gray-300 animate-pulse-shadow"
                                 onClick={() => {
                                     setQuizStarted(true);
-                                    preloadResultImages();
                                 }}>START</Button>
                         </div>
                     </div>

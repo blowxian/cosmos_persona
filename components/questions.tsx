@@ -7,6 +7,7 @@ import React, { useEffect, useState, createContext, useContext } from "react";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
 import { preloadImages } from '@/lib/preloadImages';
+import ResultModal from "@/components/modals/result-modal";
 import QuitQuizModal from "@/components/modals/quit-quiz-modal";
 
 type Answer = {
@@ -223,6 +224,7 @@ const Questions: React.FC<Props> = ({ questions }) => {
                     </>
                 )}
             </div>
+            <ResultModal/>
             <QuitQuizModal />
         </QuizContext.Provider>
     );

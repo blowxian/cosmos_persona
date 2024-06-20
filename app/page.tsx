@@ -326,10 +326,15 @@ export default function Home() {
             </main>
 
             <footer className="bg-gray-800 text-white py-4">
-                <div className="container mx-auto flex justify-between items-center w-full md:w-[90%] lg:w-[70%] max-w-4xl">
-                    <a href="/#" className="text-sm font-semibold hover:underline">Blog</a>
-                    <a href="/#" className="text-sm font-semibold hover:underline">Privacy Policy</a>
-                    <a href="/#" className="text-sm font-semibold hover:underline">Disclaimer</a>
+                <div className="container mx-auto flex flex-col md:flex-row justify-between items-center w-full md:w-[90%] lg:w-[70%] max-w-4xl space-y-4 md:space-y-0">
+                    <div className="flex space-x-4">
+                        <a href="/#" className="text-sm font-semibold hover:underline">Blog</a>
+                        <a href="/#" className="text-sm font-semibold hover:underline">Privacy Policy</a>
+                        <a href="/#" className="text-sm font-semibold hover:underline">Disclaimer</a>
+                    </div>
+                    <div className="text-xs">
+                        &copy; {new Date().getFullYear()} cosmospersona.net All rights reserved.
+                    </div>
                 </div>
             </footer>
         </>

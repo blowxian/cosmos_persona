@@ -31,7 +31,7 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
         <head>
-            <meta name="google-site-verification" content="1vZRCUh1jx4nNHbtKIW-3ReVvjDohuS7VhoycIbLQS4"/>
+            <meta name="google-site-verification" content="NnJDrzTwNEz3NGvA4bqs0RppBluWriW0r3cwog4VtbU"/>
             <Script
                 src={`https://www.googletagmanager.com/gtag/js?id=${gaIds[0]}`}
                 strategy="afterInteractive"

@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     title: "Cosmos Persona Personality Quiz Test | Discover Your Cosmic Identity",
     description: "The Cosmos Persona Personality Quiz is a whimsical and unique online personality test . It has recently taken social media by storm, amassing immense popularity on platforms like Instagram, TikTok, and Reddit. ",
     keywords: "Cosmos Persona, Personality Quiz, Online Test, Space-themed Quiz, Cosmic Identity",
-    robots: "noindex",
 };
 
 export default function RootLayout({
@@ -31,22 +30,25 @@ export default function RootLayout({
 
     return (
         <html lang="en" suppressHydrationWarning>
-        <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${gaIds[0]}`}
-            strategy="afterInteractive"
-        />
-        <Script
-            id="gtag-init"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-                __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            ${gaConfigScript}
-          `,
-            }}
-        />
+        <head>
+            <meta name="google-site-verification" content="1vZRCUh1jx4nNHbtKIW-3ReVvjDohuS7VhoycIbLQS4"/>
+            <Script
+                src={`https://www.googletagmanager.com/gtag/js?id=${gaIds[0]}`}
+                strategy="afterInteractive"
+            />
+            <Script
+                id="gtag-init"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            ${gaConfigScript}
+                        `,
+                }}
+            />
+        </head>
         <body className={poppins.className}>
         <ModalProvider/>
         {children}

@@ -28,7 +28,7 @@ export default function Home() {
                 />
                 <meta name="keywords"
                       content="Cosmos Persona, Personality Quiz, Online Test, Space-themed Quiz, Cosmic Identity"/>
-                <meta name="robots" content="noindex"/>
+                <meta name="google-site-verification" content="1vZRCUh1jx4nNHbtKIW-3ReVvjDohuS7VhoycIbLQS4"/>
             </Head>
 
             <header className="bg-gray-800 text-white py-4">

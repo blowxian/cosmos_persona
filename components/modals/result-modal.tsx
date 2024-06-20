@@ -14,11 +14,9 @@ import {
     FacebookShareButton,
     TwitterShareButton,
     LinkedinShareButton,
-    WeiboShareButton,
     FacebookIcon,
     TwitterIcon,
     LinkedinIcon,
-    WeiboIcon,
 } from "react-share";
 
 type ResultType =

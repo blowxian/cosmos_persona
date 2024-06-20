@@ -1,11 +1,23 @@
 // /app/page.tsx
+'use client'
 
+import { useEffect } from "react";
 import Questions from "@/components/questions";
 import {questions} from "@/constants";
 import Image from "next/image";
 import Head from "next/head";
 
 export default function Home() {
+    useEffect(() => {
+        const iframes = document.querySelectorAll<HTMLIFrameElement>('.lazy-iframe');
+        iframes.forEach(iframe => {
+            const dataSrc = iframe.getAttribute('data-src');
+            if (dataSrc) {
+                iframe.src = dataSrc;
+            }
+        });
+    }, []);
+
     return (
         <>
             <Head>
@@ -78,24 +90,24 @@ export default function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="aspect-w-16 aspect-h-9">
                             <iframe
-                                src="https://www.youtube.com/embed/KGYgzHQy6Tw?si=gacsd_pJAPBs3kwl"
+                                data-src="https://www.youtube.com/embed/KGYgzHQy6Tw?si=gacsd_pJAPBs3kwl"
                                 title="YouTube video player"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerPolicy="strict-origin-when-cross-origin"
                                 allowFullScreen
-                                className="w-full h-full"
+                                className="w-full h-full lazy-iframe"
                             ></iframe>
                         </div>
                         <div className="aspect-w-16 aspect-h-9">
                             <iframe
-                                src="https://www.youtube.com/embed/OReqDA1fuGI?si=E3t1o9U52ie2-lsF"
+                                data-src="https://www.youtube.com/embed/OReqDA1fuGI?si=E3t1o9U52ie2-lsF"
                                 title="YouTube video player"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerPolicy="strict-origin-when-cross-origin"
                                 allowFullScreen
-                                className="w-full h-full"
+                                className="w-full h-full lazy-iframe"
                             ></iframe>
                         </div>
                     </div>
@@ -300,24 +312,24 @@ export default function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="aspect-w-16 aspect-h-9">
                             <iframe
-                                src="https://www.youtube.com/embed/8qh_sPv7Ngs?si=gCmEPOFWBGJiM87I"
+                                data-src="https://www.youtube.com/embed/8qh_sPv7Ngs?si=gCmEPOFWBGJiM87I"
                                 title="YouTube video player"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerPolicy="strict-origin-when-cross-origin"
                                 allowFullScreen
-                                className="w-full h-full"
+                                className="w-full h-full lazy-iframe"
                             ></iframe>
                         </div>
                         <div className="aspect-w-16 aspect-h-9">
                             <iframe
-                                src="https://www.youtube.com/embed/UGl8nQ9n5V8?si=b31Bw89-pWHAhZro"
+                                data-src="https://www.youtube.com/embed/UGl8nQ9n5V8?si=b31Bw89-pWHAhZro"
                                 title="YouTube video player"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerPolicy="strict-origin-when-cross-origin"
                                 allowFullScreen
-                                className="w-full h-full"
+                                className="w-full h-full lazy-iframe"
                             ></iframe>
                         </div>
                     </div>

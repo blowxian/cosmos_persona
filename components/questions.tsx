@@ -140,16 +140,21 @@ const Questions: React.FC<Props> = ({ questions }) => {
     };
 
     useEffect(() => {
-        if (questions.length > 0 && curr < questions.length) {
-            setAnswers(handleShuffle(questions[curr].answers));
-            setProgressValue((100 / questions.length) * (curr + 1));
-        }
+        if (!quizStarted) {
+            resetQuiz(); // Ensure state is reset when quiz is not started
+        } else {
+            if (questions.length > 0 && curr < questions.length) {
+                setAnswers(handleShuffle(questions[curr].answers));
+                setProgressValue((100 / questions.length) * (curr + 1));
+            }
 
-        if (questions.length > 0 && curr + 1 < questions.length) {
-            const nextImage = `/${questions[curr + 1].image}`;
-            preloadImages([nextImage]).then(r => console.log("Next image preloaded!"));
+            if (questions.length > 0 && curr + 1 < questions.length) {
+                const nextImage = `/${questions[curr + 1].image}`;
+                preloadImages([nextImage]).then(r => console.log("Next image preloaded!"));
+            }
         }
-    }, [curr, questions]);
+    }, [quizStarted, curr, questions]);
+
 
     const formatText = (text: string): string => {
         return text.replace(/\*(.*?)\*/g, '<span class="font-bold underline">$1</span>');

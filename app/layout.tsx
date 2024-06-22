@@ -32,6 +32,7 @@ export default function RootLayout({
         <html lang="en" suppressHydrationWarning>
         <head>
             <meta name="google-site-verification" content="rpDVApX0PnUjDfaTwh0tke808LErmuAljbtB7UMvyME"/>
+            <link rel="preload" href="/img/thumbnail_01.webp" as="image"/>
             <Script
                 src={`https://www.googletagmanager.com/gtag/js?id=${gaIds[0]}`}
                 strategy="afterInteractive"

@@ -23,19 +23,8 @@ export default function Home() {
 
     return (
         <>
-            <Head>
-                <title>Cosmos Persona Personality Quiz Test | Discover Your Cosmic Identity</title>
-                <meta
-                    name="description"
-                    content="Explore the Cosmos Persona Personality Quiz, a whimsical and unique online test that determines your cosmic identity through engaging scenarios. Find out if you're a Black Hole, Nebula, or Shooting Star!"
-                />
-                <meta name="keywords"
-                      content="Cosmos Persona, Personality Quiz, Online Test, Space-themed Quiz, Cosmic Identity"/>
-                <meta name="google-site-verification" content="1vZRCUh1jx4nNHbtKIW-3ReVvjDohuS7VhoycIbLQS4"/>
-            </Head>
-
             <header className="bg-gray-800 text-white py-4">
-                <div className="container mx-auto items-center w-full md:w-[90%] lg:w-[70%] max-w-4xl">
+            <div className="container mx-auto items-center w-full md:w-[90%] lg:w-[70%] max-w-4xl">
                     <h1 className="text-2xl font-semibold mb-4">Cosmos Persona Personality Quiz Test</h1>
                     <p>
                         The Cosmos Persona Personality Quiz is a whimsical and unique online personality test . It has

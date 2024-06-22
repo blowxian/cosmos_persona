@@ -1,11 +1,14 @@
 // /app/page.tsx
 'use client'
 
-import { useEffect } from "react";
+import {useEffect} from "react";
 import Questions from "@/components/questions";
 import {questions} from "@/constants";
 import Image from "next/image";
-import Head from "next/head";
+import Head from "next/head"
+import dynamic from 'next/dynamic';
+
+const LazyLoadYouTube = dynamic(() => import('@/components/lazy-load-youtube'), {ssr: false});
 
 export default function Home() {
     useEffect(() => {
@@ -88,28 +91,8 @@ export default function Home() {
                 <section
                     className="content bg-white p-6 shadow-md w-full md:w-[90%] lg:w-[70%] max-w-4xl rounded-md mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="aspect-w-16 aspect-h-9">
-                            <iframe
-                                data-src="https://www.youtube.com/embed/KGYgzHQy6Tw?si=gacsd_pJAPBs3kwl"
-                                title="YouTube video player"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                allowFullScreen
-                                className="w-full h-full lazy-iframe"
-                            ></iframe>
-                        </div>
-                        <div className="aspect-w-16 aspect-h-9">
-                            <iframe
-                                data-src="https://www.youtube.com/embed/OReqDA1fuGI?si=E3t1o9U52ie2-lsF"
-                                title="YouTube video player"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                allowFullScreen
-                                className="w-full h-full lazy-iframe"
-                            ></iframe>
-                        </div>
+                        <LazyLoadYouTube videoId="KGYgzHQy6Tw"/>
+                        <LazyLoadYouTube videoId="OReqDA1fuGI"/>
                     </div>
                 </section>
 
@@ -310,35 +293,16 @@ export default function Home() {
                 <section
                     className="content bg-white p-6 shadow-md w-full md:w-[90%] lg:w-[70%] max-w-4xl rounded-md mx-auto mb-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="aspect-w-16 aspect-h-9">
-                            <iframe
-                                data-src="https://www.youtube.com/embed/8qh_sPv7Ngs?si=gCmEPOFWBGJiM87I"
-                                title="YouTube video player"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                allowFullScreen
-                                className="w-full h-full lazy-iframe"
-                            ></iframe>
-                        </div>
-                        <div className="aspect-w-16 aspect-h-9">
-                            <iframe
-                                data-src="https://www.youtube.com/embed/UGl8nQ9n5V8?si=b31Bw89-pWHAhZro"
-                                title="YouTube video player"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                allowFullScreen
-                                className="w-full h-full lazy-iframe"
-                            ></iframe>
-                        </div>
+                        <LazyLoadYouTube videoId="8qh_sPv7Ngs"/>
+                        <LazyLoadYouTube videoId="UGl8nQ9n5V8"/>
                     </div>
                 </section>
 
             </main>
 
             <footer className="bg-gray-800 text-white py-4">
-                <div className="container mx-auto flex flex-col md:flex-row justify-between items-center w-full md:w-[90%] lg:w-[70%] max-w-4xl space-y-4 md:space-y-0">
+                <div
+                    className="container mx-auto flex flex-col md:flex-row justify-between items-center w-full md:w-[90%] lg:w-[70%] max-w-4xl space-y-4 md:space-y-0">
                     <div className="flex space-x-4">
                         <a href="/#" className="text-sm font-semibold hover:underline">Blog</a>
                         <a href="/#" className="text-sm font-semibold hover:underline">Privacy Policy</a>

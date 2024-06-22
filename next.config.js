@@ -7,13 +7,8 @@ module.exports = {
       return config
     },
     env: {
-        SiteTitle: 'Sample Quiz App',
+        SiteTitle: 'Cosmos Persona Personality Quiz',
         MaxCount: '10'
     },
-    trailingSlash: true,
-    generateStaticParams: function() {
-      return {
-        '/': { page: '/' }
-      };
-    }
+    trailingSlash: true
 }

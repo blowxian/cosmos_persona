@@ -60,13 +60,13 @@ export default function Home() {
                         the internet's attention and went viral between March 10, 2024, and March 16, 2024.
                     </p>
                     <Image
-                        src={"/img/thumbnail_02.png"}
+                        src={"/img/thumbnail_02.webp"}
                         alt={"Cosmos Persona Personality"}
                         width={900}
                         height={303}
                         className="image-wrap"
                         placeholder={"blur"}
-                        blurDataURL={"/img/thumbnail_02.png"}
+                        blurDataURL={"/img/thumbnail_02.webp"}
                     />
                 </section>
 
@@ -112,13 +112,13 @@ export default function Home() {
                         strengths, weaknesses, and compatibility with others.
                     </p>
                     <Image
-                        src={"/img/thumbnail_03.png"}
+                        src={"/img/thumbnail_03.webp"}
                         alt={"Cosmos Persona Personality"}
                         width={900}
                         height={610}
                         className="image-wrap"
                         placeholder={"blur"}
-                        blurDataURL={"/img/thumbnail_03.png"}
+                        blurDataURL={"/img/thumbnail_03.webp"}
                     />
                 </section>
 
@@ -154,13 +154,13 @@ export default function Home() {
                         are:
                     </p>
                     <Image
-                        src={"/img/thumbnail_04.png"}
+                        src={"/img/thumbnail_04.webp"}
                         alt={"Cosmos Persona Personality"}
                         width={840}
                         height={1138}
                         className="image-wrap"
                         placeholder={"blur"}
-                        blurDataURL={"/img/thumbnail_04.png"}
+                        blurDataURL={"/img/thumbnail_04.webp"}
                     />
                     <ul className="list-decimal list-inside mb-4 flex flex-wrap text-xs">
                         <li className="w-1/4 pr-2">Black Hole</li>

@@ -79,7 +79,7 @@ const config = {
             },
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                'custom-bg': "url('/img/thumbnail_01.png')",
+                'custom-bg': "url('/img/thumbnail_01.webp')",
             },
         },
     },

@@ -37,3 +37,6 @@ next-env.d.ts
 
 # IDEA
 .idea/
+
+# build bash
+build_and_push.sh

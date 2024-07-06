@@ -1,0 +1,101 @@
+{
+  "HomePage": {
+    "title": "Teste de Personalidade Cosmos Persona",
+    "header": {
+      "h1": "Teste de Personalidade Cosmos Persona",
+      "p": "O Teste de Personalidade Cosmos Persona é um teste de personalidade online único e caprichoso. Recentemente, ele se tornou extremamente popular nas redes sociais, acumulando imensa popularidade em plataformas como Instagram, TikTok e Reddit."
+    },
+    "main": {
+      "section1": {
+        "p": "Ambientado em uma aventura cósmica, ele determina os tipos de personalidade por meio de uma série de cenários hipotéticos envolventes. De acordo com o Google Trends, este teste temático espacial começou a capturar a atenção da internet e se tornou viral entre 10 de março de 2024 e 16 de março de 2024.",
+        "img": {
+          "src": "/img/thumbnail_02.webp",
+          "alt": "Cosmos Persona Personalidade"
+        }
+      },
+      "section2": {
+        "h2": "O que é o Teste de Personalidade Cosmos Persona?",
+        "p1": "O Teste de Personalidade Cosmos Persona é uma nova abordagem ao clássico Indicador de Tipos Myers-Briggs (MBTI), combinando testes de personalidade inspirados por traços de caráter inatos com um toque celestial. Criado pelo imaginativo I-see WJ, é uma jornada divertida e perspicaz na identidade cósmica.",
+        "p2": "Ao longo de 12 perguntas peculiares, você encontra situações estranhas como conhecer gatos espaciais ou um robô. Suas respostas determinam sua 'Cosmos Persona' - um arquétipo celestial que reflete sua personalidade central."
+      },
+      "section3": {
+        "grid": [
+          { "videoId": "KGYgzHQy6Tw" },
+          { "videoId": "OReqDA1fuGI" }
+        ]
+      },
+      "section4": {
+        "h2": "Como Funciona o Teste de Personalidade Cosmos Persona",
+        "p1": "A premissa do Teste de Personalidade Cosmos Persona é simples, mas imaginativa. Ele leva o usuário em uma jornada através de uma série de 12 perguntas, onde são apresentadas várias situações e perguntado como reagiriam ou o que fariam nessas circunstâncias.",
+        "p2": "O teste começa com o usuário embarcando em um passeio de ônibus, que rapidamente toma um rumo inesperado quando o ônibus entra em um túnel misterioso, levando a encontros com gatos espaciais, um robô e até um aspirador gigante. As respostas do usuário a esses cenários peculiares e imaginativos são analisadas para determinar sua 'Cosmos Persona', que reflete seus traços de personalidade centrais, pontos fortes, fracos e compatibilidade com os outros.",
+        "img": {
+          "src": "/img/thumbnail_03.webp",
+          "alt": "Cosmos Persona Personalidade"
+        }
+      },
+      "section5": {
+        "h2": "Quem Criou o Teste de Personalidade Cosmos Persona?",
+        "p1": "Warisa 'I-see' Jaidee, um artista tailandês popular no Instagram, é o gênio criativo por trás do viral Teste de Personalidade Cosmos Persona. Conhecido pelo pseudônimo Izon Falzo, Jaidee conquistou as redes sociais com sua aventura cósmica e temática espacial. Utilizando seus talentos em design gráfico e narrativa imaginativa, Warisa 'I-see' Jaidee apresenta insights de personalidade de maneira única e cativante.",
+        "p2": "O objetivo de Falzo era aplicar a teoria da personalidade de uma forma visualmente marcante e imaginativa para despertar a curiosidade sobre a verdadeira natureza de cada um. Ele se inspirou em avaliações de personalidade populares, como o Indicador de Tipos Myers-Briggs (MBTI) e o recente viral 'What Cake R U?'.",
+        "p3": "Falzo é conhecido por projetar testes de personalidade únicos que combinam ciência, arte e imaginação em um formato caprichoso. O teste levou quase um ano para ser desenvolvido como seu primeiro grande projeto."
+      },
+      "section6": {
+        "h2": "Quais são as Possíveis Personas Cósmicas no Teste?",
+        "p1": "As 12 principais possíveis personas cósmicas ou tipos de personalidade no Teste de Personalidade Cosmos Persona são:",
+        "img": {
+          "src": "/img/thumbnail_04.webp",
+          "alt": "Cosmos Persona Personalidade"
+        },
+        "ul": [
+          "Buraco Negro",
+          "Matéria Escura",
+          "Nebulosa",
+          "Meteorito",
+          "Estrela Cadente",
+          "Sol",
+          "Lua",
+          "OVNI",
+          "Planeta",
+          "Satélite",
+          "Aglomerado Estelar",
+          "Cometa"
+        ],
+        "p2": "A tabela abaixo fornece uma análise de parte das personas cósmicas e seus traços de personalidade representativos:",
+        "table": [
+          { "persona": "Buraco Negro", "traits": "Natureza intensa, perceptiva, sombria, mas iluminadora. Atrai os outros para dentro." },
+          { "persona": "Matéria Escura", "traits": "Essência etérea e misteriosa, não totalmente compreendida. Influencia eventos sutilmente da periferia." },
+          { "persona": "Nebulosa", "traits": "Qualidades criativas, nutridoras e transformadoras que cultivam novas estrelas e vida planetária." },
+          { "persona": "Meteorito", "traits": "Espírito intrépido e adaptável, cheio de paixão ardente, mas propenso a se esgotar." },
+          { "persona": "Estrela Cadente", "traits": "Executor rápido e decidido, pronto para novas experiências, embora de natureza efêmera." },
+          { "persona": "Sol", "traits": "Centro caloroso e radiante, fornecendo luz e sustento para todo o sistema solar." },
+          { "persona": "Lua", "traits": "Regulador de marés sempre em mudança, mas confiável, com qualidades imaginativas e realistas." },
+          { "persona": "OVNI", "traits": "Explorador curioso que ultrapassa os limites de reinos desconhecidos, longe da vida comum." },
+          { "persona": "Planeta", "traits": "Fundação estável e duradoura, apoiando ecossistemas diversos e satélites em órbita." },
+          { "persona": "Satélite", "traits": "Jogador de equipe leal, ajudando nas grandes missões dos corpos planetários em órbita." },
+          { "persona": "Aglomerado Estelar", "traits": "Grupo sociável que tira energia da cooperação, embora vulnerável à dispersão." },
+          { "persona": "Cometa", "traits": "Visitante excêntrico que traz exibições breves, mas deslumbrantes no céu noturno a cada poucas décadas." }
+        ],
+        "p3": "As principais 12 personas cósmicas representam diferentes objetos e fenômenos celestiais, cada um associado a distintos traços de personalidade, pontos fortes e fracos de acordo com o quadro do teste."
+      },
+      "section7": {
+        "h2": "Quão Precisos são os Resultados do Teste Cosmos Persona?",
+        "p1": "O Teste Cosmos Persona ganhou ampla popularidade nas redes sociais, com os usuários compartilhando seus resultados e expressando surpresa com a precisão das descrições de personalidade. Embora sua precisão seja subjetiva, ele oferece uma maneira única e visualmente atraente para os indivíduos obterem insights sobre suas personalidades e compartilharem seus resultados com amigos e seguidores.",
+        "p2": "No entanto, é importante notar que, como a maioria dos testes de personalidade online, o Teste Cosmos Persona deve ser levado com cautela e não tratado como uma avaliação definitiva ou científica da personalidade de alguém. Seu principal objetivo é fornecer uma maneira divertida e envolvente para os usuários explorarem suas personalidades através da lente dos fenômenos cósmicos."
+      },
+      "section8": {
+        "grid": [
+          { "videoId": "8qh_sPv7Ngs" },
+          { "videoId": "UGl8nQ9n5V8" }
+        ]
+      }
+    },
+    "footer": {
+      "links": [
+        { "text": "Blog", "href": "/#" },
+        { "text": "Política de Privacidade", "href": "/#" },
+        { "text": "Aviso Legal", "href": "/#" }
+      ],
+      "copyright": "&copy; ${year} cosmospersona.net Todos os direitos reservados."
+    }
+  }
+}

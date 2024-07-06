@@ -3,6 +3,8 @@ import "./globals.css";
 import type {Metadata} from "next";
 import Script from "next/script";
 import {Poppins} from "next/font/google";
+import {NextIntlClientProvider} from 'next-intl';
+import {getMessages} from 'next-intl/server';
 
 const poppins = Poppins({
     weight: "400",
@@ -15,11 +17,17 @@ export const metadata: Metadata = {
     keywords: "Cosmos Persona, Personality Quiz, Online Test, Space-themed Quiz, Cosmic Identity",
 };
 
-export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
+export default async function LocaleLayout({
+                                               children,
+                                               params: {locale}
+                                           }: {
     children: React.ReactNode;
-}>) {
+    params: { locale: string };
+}) {
+    // Providing all messages to the client
+    // side is the easiest way to get started
+    const messages = await getMessages();
+
     // 假设 NEXT_PUBLIC_GA_ID 是逗号分隔的字符串
     const gaIds = process.env.NEXT_PUBLIC_GA_IDS?.split(',') || [];
 
@@ -56,7 +64,9 @@ export default function RootLayout({
         </head>
         <body className={poppins.className}>
         <ModalProvider/>
-        {children}
+        <NextIntlClientProvider messages={messages}>
+            {children}
+        </NextIntlClientProvider>
         </body>
         </html>
     );

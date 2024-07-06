@@ -1,0 +1,154 @@
+{
+  "HomePage": {
+    "title": "Test de personnalité Cosmos Persona",
+    "header": {
+      "h1": "Test de personnalité Cosmos Persona",
+      "p": "Le test de personnalité Cosmos Persona est un test de personnalité en ligne unique et fantaisiste. Il a récemment pris d'assaut les réseaux sociaux, amassant une immense popularité sur des plateformes comme Instagram, TikTok et Reddit."
+    },
+    "main": {
+      "section1": {
+        "p": "Situé dans une aventure cosmique, il détermine les types de personnalité à travers une série de scénarios hypothétiques engageants. Selon Google Trends, ce quiz sur le thème de l'espace a commencé à attirer l'attention d'Internet et est devenu viral entre le 10 mars 2024 et le 16 mars 2024.",
+        "img": {
+          "src": "/img/thumbnail_02.webp",
+          "alt": "Personnalité Cosmos Persona"
+        }
+      },
+      "section2": {
+        "h2": "Qu'est-ce que le test de personnalité Cosmos Persona ?",
+        "p1": "Le test de personnalité Cosmos Persona est une nouvelle approche de l'indicateur de type Myers-Briggs (MBTI) classique, combinant des tests de personnalité inspirés par des traits de caractère innés avec une touche céleste. Créé par l'imaginatif I-see WJ, c'est un voyage amusant et perspicace dans l'identité cosmique.",
+        "p2": "Au fil de 12 questions originales, vous rencontrez des situations étranges comme rencontrer des chats de l'espace ou un robot. Vos réponses déterminent votre 'Cosmos Persona' - un archétype céleste reflétant votre personnalité de base."
+      },
+      "section3": {
+        "grid": [
+          {
+            "videoId": "KGYgzHQy6Tw"
+          },
+          {
+            "videoId": "OReqDA1fuGI"
+          }
+        ]
+      },
+      "section4": {
+        "h2": "Comment fonctionne le test de personnalité Cosmos Persona",
+        "p1": "Le principe du quiz Cosmos Persona est simple mais imaginatif. Il emmène l'utilisateur à travers une série de 12 questions, où il est confronté à diverses situations et doit dire comment il réagirait ou ce qu'il ferait dans ces circonstances.",
+        "p2": "Le quiz commence par un trajet en bus, qui prend rapidement une tournure inattendue lorsque le bus entre dans un tunnel mystérieux, conduisant à des rencontres avec des chats de l'espace, un robot et même un aspirateur géant. Les réponses de l'utilisateur à ces scénarios étranges et imaginatifs sont analysées pour déterminer leur 'Cosmos Persona', qui reflète leurs traits de personnalité, leurs forces, leurs faiblesses et leur compatibilité avec les autres.",
+        "img": {
+          "src": "/img/thumbnail_03.webp",
+          "alt": "Personnalité Cosmos Persona"
+        }
+      },
+      "section5": {
+        "h2": "Qui a créé le test de personnalité Cosmos Persona ?",
+        "p1": "Warisa 'I-see' Jaidee, un artiste thaïlandais populaire sur Instagram, est le génie créatif derrière le test de personnalité Cosmos Persona viral. Connu sous le nom de plume Izon Falzo, Jaidee a pris d'assaut les réseaux sociaux avec son aventure cosmique sur le thème de l'espace. Utilisant ses talents en design graphique et en narration imaginative, Warisa 'I-see' Jaidee présente des aperçus de personnalité de manière unique et captivante.",
+        "p2": "L'objectif de Falzo était d'appliquer la théorie de la personnalité de manière visuellement frappante et imaginative pour susciter la curiosité sur sa vraie nature. Il s'est inspiré d'évaluations de personnalité populaires comme l'indicateur de type Myers-Briggs (MBTI) ainsi que du récent quiz viral 'What Cake R U ?'.",
+        "p3": "Falzo est connu pour concevoir des tests de personnalité uniques qui mélangent la science, l'art et l'imagination dans un format fantaisiste. Le quiz lui a pris près d'un an à développer en tant que premier projet majeur."
+      },
+      "section6": {
+        "h2": "Quels sont les Cosmos Persona possibles dans le quiz ?",
+        "p1": "Les 12 principaux Cosmos Persona ou types de personnalité possibles dans le test de personnalité Cosmos Persona sont :",
+        "img": {
+          "src": "/img/thumbnail_04.webp",
+          "alt": "Personnalité Cosmos Persona"
+        },
+        "ul": [
+          "Trou Noir",
+          "Matière Noire",
+          "Nébuleuse",
+          "Météorite",
+          "Étoile Filante",
+          "Soleil",
+          "Lune",
+          "OVNI",
+          "Planète",
+          "Satellite",
+          "Amas d'Étoiles",
+          "Comète"
+        ],
+        "p2": "Le tableau ci-dessous donne un aperçu de certains des Cosmos Persona et de leurs traits de personnalité représentatifs :",
+        "table": [
+          {
+            "persona": "Trou Noir",
+            "traits": "Nature intense, perceptive, sombre mais illuminante. Attire les autres vers l'intérieur."
+          },
+          {
+            "persona": "Matière Noire",
+            "traits": "Essence éthérée et mystérieuse non totalement comprise. Influence les événements subtilement depuis la périphérie."
+          },
+          {
+            "persona": "Nébuleuse",
+            "traits": "Qualités créatives, nourrissantes et transformatrices qui cultivent de nouvelles vies stellaires et planétaires."
+          },
+          {
+            "persona": "Météorite",
+            "traits": "Esprit intrépide et adaptable, plein de passion ardente mais sujet à l'épuisement."
+          },
+          {
+            "persona": "Étoile Filante",
+            "traits": "Go-getter rapide prêt pour de nouvelles expériences bien que de nature éphémère."
+          },
+          {
+            "persona": "Soleil",
+            "traits": "Centre chaud et radieux fournissant lumière et subsistance à tout le système solaire."
+          },
+          {
+            "persona": "Lune",
+            "traits": "Régulateur fiable mais changeant des marées avec des qualités imaginatives mais ancrées."
+          },
+          {
+            "persona": "OVNI",
+            "traits": "Explorateur curieux et novateur de royaumes inconnus loin de la vie ordinaire."
+          },
+          {
+            "persona": "Planète",
+            "traits": "Fondation stable et durable soutenant divers écosystèmes et satellites en orbite."
+          },
+          {
+            "persona": "Satellite",
+            "traits": "Membre d'équipe loyal aidant aux grandes missions des corps planétaires en orbite."
+          },
+          {
+            "persona": "Amas d'Étoiles",
+            "traits": "Groupe grégaire tirant son énergie de la coopération bien que vulnérable à la dispersion."
+          },
+          {
+            "persona": "Comète",
+            "traits": "Visiteur excentrique apportant des spectacles brefs mais éblouissants dans le ciel nocturne tous les quelques décennies."
+          }
+        ],
+        "p3": "Les 12 principaux Cosmos Persona représentent différents objets célestes et phénomènes, chacun associé à des traits de personnalité, des forces et des faiblesses distincts selon le cadre du quiz."
+      },
+      "section7": {
+        "h2": "Quelle est la précision des résultats du test Cosmos Persona ?",
+        "p1": "Le quiz Cosmos Persona a gagné en popularité sur les réseaux sociaux, les utilisateurs partageant leurs résultats et exprimant leur surprise quant à la précision des descriptions de personnalité. Bien que sa précision soit subjective, il offre une manière unique et visuellement attrayante pour les individus d'obtenir des aperçus sur leur personnalité et de partager leurs résultats avec leurs amis et abonnés.",
+        "p2": "Cependant, il est important de noter que, comme la plupart des tests de personnalité en ligne, le quiz Cosmos Persona doit être pris avec des pincettes et ne doit pas être considéré comme une évaluation définitive ou scientifique de sa personnalité. Son but principal est de fournir une manière amusante et engageante pour les utilisateurs d'explorer leur personnalité à travers le prisme des phénomènes cosmiques."
+      },
+      "section8": {
+        "grid": [
+          {
+            "videoId": "8qh_sPv7Ngs"
+          },
+          {
+            "videoId": "UGl8nQ9n5V8"
+          }
+        ]
+      }
+    },
+    "footer": {
+      "links": [
+        {
+          "text": "Blog",
+          "href": "/#"
+        },
+        {
+          "text": "Politique de Confidentialité",
+          "href": "/#"
+        },
+        {
+          "text": "Avertissement",
+          "href": "/#"
+        }
+      ],
+      "copyright": "&copy; ${year} cosmospersona.net Tous droits réservés."
+    }
+  }
+}

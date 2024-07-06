@@ -37,4 +37,3 @@ next-env.d.ts
 
 # IDEA
 .idea/
-/package-lock.json

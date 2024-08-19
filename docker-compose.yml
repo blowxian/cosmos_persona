@@ -1,21 +1,23 @@
 version: '3.8'
+
 services:
-  cosmos_persona:
-    build:
-      context: .
-      args:
-        - NODE_ENV=development
-      target: development
-    command: npm run dev
-    volumes:
-      - .:/app
-      - /app/node_modules
+  sdp:
+    image: blowxian/sdp:latest
+    container_name: sdp
     ports:
-      - '3002:3000'                                               # 区分于其他分支的端口
+      - "3000:3000"
     environment:
-      - CHOKIDAR_USEPOLLING=true
-      - NODE_ENV=development
-    container_name: cosmos_persona_dev
-networks:
-  cosmos_persona_dev:
-    driver: bridge
+      NODE_ENV: production
+    restart: always
+
+  sdp_db:
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: sdp_admin
+      POSTGRES_PASSWORD: sdp_2024
+      POSTGRES_DB: sdp
+    volumes:
+      - ./data:/var/lib/postgresql/data                           # 持久化数据
+    container_name: sdp_db

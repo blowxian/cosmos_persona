@@ -9,6 +9,7 @@ import {Separator} from "./ui/separator";
 import {preloadImages} from '@/lib/preloadImages';
 import ResultModal from "@/components/modals/result-modal";
 import QuitQuizModal from "@/components/modals/quit-quiz-modal";
+import { logEvent } from '@/lib/GAlog';
 
 type Answer = {
     text: string;
@@ -83,6 +84,7 @@ const Questions: React.FC<Props> = ({questions}) => {
             setScores(newScores);
 
             console.log(scores);
+            logEvent('quiz_progress', 'Quiz', `Question ${curr + 1}`, curr + 1);
         }
 
         setAnswers(
@@ -94,6 +96,7 @@ const Questions: React.FC<Props> = ({questions}) => {
 
     // 用户挽留部分，提升留存
     const handleQuit = () => {
+        logEvent('quiz_quit', 'Quiz', 'Quit Quiz', curr + 1);
         onOpen("quitQuiz");
     };
 
@@ -122,6 +125,7 @@ const Questions: React.FC<Props> = ({questions}) => {
         }
 
         console.log(scores);
+        logEvent('quiz_complete', 'Quiz', 'Show Results', questions.length);
 
         setTimeout(() =>{
             onOpen("showResults", {

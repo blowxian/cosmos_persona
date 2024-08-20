@@ -14,6 +14,7 @@ import useModalStore from "@/hooks/useModalStore";
 import { useRouter } from "next/navigation";
 import { useContext } from "react";
 import { QuizContext } from "@/components/questions";
+import { logEvent } from '@/lib/GAlog';
 
 const QuitQuizModal = () => {
   const { isOpen, type, onClose } = useModalStore();
@@ -22,6 +23,7 @@ const QuitQuizModal = () => {
   const { resetQuiz } = useContext(QuizContext);
 
   const handleConfirm = () => {
+    logEvent('quiz_quit_confirmed', 'Quiz', 'Quit Confirmed', 0);
     resetQuiz();
     router.push("/");
   };

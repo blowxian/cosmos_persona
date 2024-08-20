@@ -21,6 +21,7 @@ import {
     TwitterIcon,
     LinkedinIcon,
 } from "react-share";
+import { logEvent } from '@/lib/GAlog';
 
 type ResultType =
     | "ISTJ"
@@ -60,6 +61,7 @@ const ResultModal = () => {
     const [emailSubmitted, setEmailSubmitted] = useState(false);
 
     const handleReplay = () => {
+        logEvent('quiz_replay', 'Quiz', 'Replay Quiz', 0);
         resetQuiz();
         router.push("/");
         onClose();
@@ -84,8 +86,10 @@ const ResultModal = () => {
                 body: JSON.stringify(payload),
             });
             setEmailSubmitted(true);
+            logEvent('email_submitted', 'User', 'Email Submitted', subscribe ? 1 : 0);
         } catch (error) {
             console.error("Failed to submit email", error);
+            logEvent('email_submit_failed', 'User', 'Email Submit Failed', 0);
         }
     };
 

@@ -16,6 +16,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { logEvent } from '@/lib/GAlog';
 
 const LazyLoadYouTube = dynamic(() => import('@/components/lazy-load-youtube'), { ssr: false });
 
@@ -79,14 +80,18 @@ export default function Home() {
                 iframe.src = dataSrc;
             }
         });
+
+        logEvent('page_view', 'Navigation', 'Home Page', 1);
     }, []);
 
     const handleSectionClick = (sectionName: string) => {
         notifyFeishu(`用户点击了 ${sectionName} 部分`);
+        logEvent('section_click', 'Navigation', sectionName, 1);
     };
 
     const handleLanguageChange = (locale: string) => {
         notifyFeishu(`用户切换语言到: ${languageLabels[locale as keyof typeof languageLabels]}`);
+        logEvent('language_change', 'User', `Language: ${locale}`, 1);
         window.location.href = `/${locale}${pathname}`;
     };
 

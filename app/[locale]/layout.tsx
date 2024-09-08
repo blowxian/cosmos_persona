@@ -1,10 +1,10 @@
 import ModalProvider from "@/components/modals/modal-provider";
 import "./globals.css";
-import type {Metadata} from "next";
+import type { Metadata } from "next";
 import Script from "next/script";
-import {Poppins} from "next/font/google";
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
+import { Poppins } from "next/font/google";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 
 const poppins = Poppins({
     weight: "400",
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 };
 
 export default async function LocaleLayout({
-                                               children,
-                                               params: {locale}
-                                           }: {
+    children,
+    params: { locale }
+}: {
     children: React.ReactNode;
     params: { locale: string };
 }) {
@@ -36,37 +36,37 @@ export default async function LocaleLayout({
     ).join('');
 
     return (
-        <html lang="en" suppressHydrationWarning>
-        <head>
-            <meta name="google-site-verification" content="rpDVApX0PnUjDfaTwh0tke808LErmuAljbtB7UMvyME"/>
-            <link rel="preload" href="/img/thumbnail_01.webp" as="image"/>
-            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
-            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-            <link rel="manifest" href="/site.webmanifest"/>
-            <Script
-                src={`https://www.googletagmanager.com/gtag/js?id=${gaIds[0]}`}
-                strategy="afterInteractive"
-            />
-            <Script
-                id="gtag-init"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
+        <html lang={locale} suppressHydrationWarning>
+            <head>
+                <meta name="google-site-verification" content="rpDVApX0PnUjDfaTwh0tke808LErmuAljbtB7UMvyME" />
+                <link rel="preload" href="/img/thumbnail_01.webp" as="image" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+                <link rel="manifest" href="/site.webmanifest" />
+                <Script
+                    src={`https://www.googletagmanager.com/gtag/js?id=${gaIds[0]}`}
+                    strategy="afterInteractive"
+                />
+                <Script
+                    id="gtag-init"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `
                             window.dataLayer = window.dataLayer || [];
                             function gtag(){dataLayer.push(arguments);}
                             gtag('js', new Date());
                             ${gaConfigScript}
                         `,
-                }}
-            />
-        </head>
-        <body className={poppins.className}>
-        <ModalProvider/>
-        <NextIntlClientProvider messages={messages}>
-            {children}
-        </NextIntlClientProvider>
-        </body>
+                    }}
+                />
+            </head>
+            <body className={poppins.className}>
+                <ModalProvider />
+                <NextIntlClientProvider messages={messages}>
+                    {children}
+                </NextIntlClientProvider>
+            </body>
         </html>
     );
 }
